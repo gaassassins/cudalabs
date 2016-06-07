@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS -N cudatest
+#PBS -o out.txt
+#PBS -e err.txt
+#PBS -q csit_cuda
+#PBS -l gpus=1
+#PBS -W x=GRES:gpus@1
+
+$PBS_O_WORKDIR/simpleMultiGPU
